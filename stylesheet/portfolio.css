@@ -527,3 +527,63 @@ button:hover, .form-container .btn:hover {
     }
 }
 /***** End of Media Query Section *****/
+/* ---------- Additional Responsive Improvements (phones & tablets) ---------- */
+/* Stack navbar links and make them tappable on small screens */
+@media screen and (max-width: 768px) {
+    .Navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: auto;
+        padding: .5rem 0;
+    }
+    .Navbar a {
+        float: none;
+        display: inline-block;
+        width: 50%; /* two links per row on small phones */
+        box-sizing: border-box;
+        padding: .9rem .5rem;
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    /* Make video overlay and slideshow scale nicely */
+    .Video_Text { padding-top: 6vh; height: auto; }
+    .white-text { padding-top: 6vh; font-size: 7vw; }
+
+    /* Slideshow container becomes full-width on small screens */
+    #Slideshow_Container { width: 92vw; padding-top: 2%; }
+    .text { font-size: 4.5vw; padding: 3vw; }
+
+    /* Make prev/next controls touch-friendly */
+    .Previous, .Next { padding: 4vw; font-size: 6vw; }
+    .dot { height: 2.5vw; width: 2.5vw; margin: .5vw; }
+
+    /* Stack columns vertically for mobile */
+    .Column_1, .Column_2 { width: 100%; height: auto; padding: 4vw; }
+
+    /* Popup button and form sizing for mobile */
+    .Pop_Up_Button { width: 40vw; bottom: 4vw; right: 4vw; font-size: 4vw; }
+    .form-popup { right: 2vw; bottom: 2vw; }
+    .form-container { max-width: 92vw; padding: 3vw; }
+    .form-container input[type=text] { padding: 3vw; font-size: 4vw; }
+    button { font-size: 4vw; padding: 3vw; }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Navbar { padding: .75rem 0; }
+    .Navbar a { width: auto; font-size: 2.75vw; padding: .9rem 1rem; }
+    #Slideshow_Container { width: 75vw; }
+    .white-text { font-size: 5.5vw; }
+    .Column_1, .Column_2 { width: 100%; height: auto; padding: 2.5vw; }
+    .Pop_Up_Button { width: 30vw; bottom: 3vw; right: 3vw; }
+    .form-container { max-width: 70vw; }
+}
+
+/* small tweak to ensure images never overflow on very narrow screens */
+@media screen and (max-width: 400px) {
+    body { font-size: 4.5vw; }
+}
+
+/* ---------- End Additional Responsive Improvements ---------- */
